@@ -1,0 +1,84 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row" class="divcenter"><h2 >Enter Company Details</h2></div>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <label><b>Company Name</b></label>
+      </div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" name="company.name" [(ngModel)]="company.name">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <label><b>Location</b></label>
+      </div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" name="company.location" [(ngModel)]="company.location">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <label><b>Year of Establishment</b></label>
+      </div>
+      <div class="col-sm-4">
+        <input type="number" class="form-control" name="company.year" [(ngModel)]="company.year">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <label><b>Count</b></label>
+      </div>
+      <div class="col-sm-4">
+        <input type="number" class="form-control" name="company.countofEmployees"
+          [(ngModel)]="company.countofEmployees">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4"> <button class="btn btn-success" type="submit" (click)="display(company)">Submit</button></div>
+    </div>
+  </div>
+
+</div>
+<div class="card">
+  <div class="card-body">
+<div class="row" class="divcenter"><h2 >Company Details</h2></div>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-10">
+  <table class="table table-striped" [style]="displayNow">
+    <thead>
+      
+      <tr>
+        <th scope="col">Company</th>
+        <th scope="col">Location</th>
+        <th scope="col">Year of Establishment</th>
+        <th scope="col">Count of Employees</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      @for (item of companies; track item.name)
+      {		<tr>
+				
+				<td>{{ item.name }}
+				</td>
+				<td>{{ item.location}}</td>
+				<td>{{ item.year}}</td>
+        <td>{{ item.countofEmployees}}</td>
+			</tr>
+		}
+      
+     
+
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+</div>

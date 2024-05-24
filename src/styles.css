@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+.divcenter {
+    margin: auto;
+    width: 100%;
+    border: 3px solid green;
+    background-color: lightgray;
+    padding: 10px;
+  }
